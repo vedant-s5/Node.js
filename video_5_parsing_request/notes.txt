@@ -1,0 +1,27 @@
+Parsing request 
+
+1. Streams-->
+
+hamare system main data transfer hamesha stream ki form main hota hai, mtlb continuous flow of data rehta hai hamesha, client ke through data jata hai phir node.js ke pass phir vo server se comms krta hai, to ye sab events Streams main hota hai.
+
+socket is that gateway jha se hamra data ata aur jata hai.
+
+2. Chunks--->
+
+suppose hamare pass input data hai user ka, to per sec ya ek sath bahut sara data jata hai jisse ham kehte hai stream of data aur stream of data ke andar bi bahut chote chote data hote hai unhe ham chunks bolte hai, suppose per sec kai sara KB data jara hai aur us KB data main 1 KB data bi hai to that 1KB data is a chunk(single)..
+
+3. Buffers --->
+
+buffer is like ki jab ham data transfer krte hai be it download or upload, to kabi kabi kisi issue ke karan data age piche chla jata hai koi piece of data jo baad main jana tha vo baad main chla gya aise, uske lia buffers create ho jate hai, these are like queue with sequence assigned to our stream of data or chunks, to vo wait krte hai ki agar sequence kharab hai to ki jab tak sai sequencewala part nhi ata vo wait krata hai phir sabko line se bhejta hai..
+
+4. Reading chunks--->
+
+now we start reading our chunks, ki hamne user se input manga tha ab ham use read krenge. ek ek krke chunks ko read krenge
+
+5. parsing request--->
+
+ab hame jo body ki values milenge use hame encode krke parese krna hai.
+
+// using modules 
+
+ab ham apne code ko chote chote parts main devide kr denge. 
