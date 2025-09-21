@@ -1,0 +1,49 @@
+1. Event Driven
+
+suppose we have a submit button and it contains out data
+to vo data jayega after clicking event listener ke pass jaise hamne (req.on("data")) kra tha ye phir ye call back function main jayega, called event queue and uske baad it will enter event loop phir uske baad hamara event handle ho jayega ya data handle ho jayega jo starting main hamne bheja tha
+
+2. we know that js and nodejs is single threaded lang mtlb ki ek bar main ek hi kaam ho skta hai.
+main execution part hamra thread hi krta hai aur agar koi aur kaam hai jaise, input,output,database se koi saman lana hai, file write krni hai aur bi chote chote kaam worker krte h uske.
+
+3. V8 engine VS libuv
+
+V8:
+1. Open-source JavaScript engine by Google.
+2. Used in Chrome and Node.js.
+3. Compiles JavaScript to native machine code.
+4. Ensures high-performance JavaScript execution.
+
+libuv:
+1. Multi-platform support library for Node.js.
+2. Handles asynchronous I/O operations.
+3. Provides event-driven architecture.
+4. Manages file system, networking, and timers non-blockingly across platforms.
+
+nodejs ke runtime main ye do chize hi kaam krti hai
+V8 jo js ko machine code main convert krta hai and 
+libuv jo c++ ki async library hai jo file system, reading writing ka kaam krta hai
+
+4. how acutally node runtime works
+
+--->> console.log("Starting Node.js");
+
+--->> db.query("SELECT * FROM public.cars",    
+      function(err, res) {
+        console.log("Query executed");
+      });
+
+--->> console.log("Before query result");
+
+
+ab jo 1st log hai vo sabse pehle print hoga cuz vpo sabse pehle call stack main jayega aur execute hoke 
+nikal jayega phir ate hai 2nd pe db query pe, it is 
+ a async work cuz database pe jake leke ana paadega 
+ to i will come into call stacka nd go inside 
+ libuv and start the async work , in the mean time 
+ 3rd log will go into call stack and execute and after
+ that libuv completes the work and that db query comes
+ inside the even queue and goes into callstack and executed and then it will print query executed. so 
+ this is how it works..
+ *  yha pe call stack comes in V8 engine.
+
