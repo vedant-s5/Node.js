@@ -1,0 +1,17 @@
+{
+  "name": "npm-test",
+  "version": "1.0.0",
+  "description": "this project is being created to learn npm",
+  "license": "ISC",
+  "author": "complete coding",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "khul-ja-sim-sim": "node app.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

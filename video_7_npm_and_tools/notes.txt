@@ -1,0 +1,74 @@
+1. npm init 
+
+(Node Package Manager)
+it helps us to create and maintain our projects and it 
+aslo helps us to downlaod many libraries which which
+we going to use in our project, and npm has stored all those libraries just we have to tell npm that this library we want in out project.
+
+-->> when you initiate npm init it will give you somthing like this:
+
+-------------------------
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+------------------------
+after this we complete the process and at last after
+typing yes, automatically a json file will be created
+in that particular folder in which you have initiated the npm.
+
+after this you can add and start argument in thr script
+part and mention your server file name on which server
+exist, so now you can run your server just by writing 
+npm start.
+
+2. npm packages
+
+1. npm: Node.js package manager for code sharing.
+2. Package: Reusable code or library.
+3. package.json: Defines package metadata and dependencies.
+4. Versioning: Manages different package versions.
+5. Local/Global: Install packages locally or globally.
+6. Registry: Public storage for open-source packages.
+7. Examples: Express, React, Lodash.
+
+-----------------
+npm install <package-name>
+
+1. --save: Adds the package to the project’s
+dependencies in package.json.
+
+2. --save-dev: Adds the package to the project’s
+devDependencies (used only in development) in package.json.
+
+3. -g: Installs the package globally, making it
+available system-wide, not just in a specific project.
+
+4. --save-exact: Installs the exact version specified
+without updating for newer versions.
+
+5. --force: Forces npm to fetch and install packages
+even if they are already installed.
+---------------
+
+nodemon--->>
+we uses this, jisse ham apne server man koi bi changes 
+kre to ye use apne aap monitor krke server main changes
+krta rhe. 
+
+(npm install nodemon --save-dev)
+
+usne 30 package downlaod kre hai kyuki nodemon kehta haiki muje mera kaam krne ke lia jo jo chize chaiye 
+vo ami sab sath leke chlta hu, unke bina mai kaam 
+nhi kr paunga 
+
+--- Now, using nodemon
+
+hame nodemon ko properply use krne ke lia globally 
+install krna padega verna to vo nhi chlega jaise ham use chahte hai.
