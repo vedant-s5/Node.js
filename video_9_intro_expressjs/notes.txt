@@ -1,0 +1,66 @@
+A. What is Express.js?
+
+1. Express.js is a minimal and flexible web application
+framework for Node.js.
+
+2. It provides a robust set of features for building
+single-page, multi-page, and hybrid web applications.
+(hybrib web apll se mmtlb hai ki ham client pe bi 
+ui krre hai aur server se bi ui define krre h)
+
+3. Express.js simplifies server-side coding by
+providing a layer of fundamental web application features.
+
+express kya krta hai ki jo ham kaam node main krre the ki app pe server define hai aur user pe baki sab hai ui 
+bi hai login bi hai authorization bi hai aur bi chize 
+hai, to ye unko multilpe middleware main baant deta hai 
+ki login tum kro, authorization tum kro, body tum dekho, baki aur bi chize hai to phir, ek ek krke middleware pe jayega hamara express aur agar bich main kuch use response dena hai to vo bi dega vo, aur koi dikkat ayi user ke through, suppose login ni kra toh 
+vhi se use wapas bhej dega ki jao login krke phir aao.
+
+B. Need of Express.js
+
+--> 
+1. Express.js Simplifies Server Creation: Helps in
+quickly setting up and running a web server without the need for complex coding.
+
+2. Routing Management: Provides a powerful routing
+mechanism to handle URLs and HTTP methods effectively.
+
+3. Middleware Support: Allows the use of middleware to
+handle requests, responses, and any middle operations
+making code modular and maintainable.
+
+4. API Development: Facilitates easy and efficient
+creation of RESTful APIs.
+
+5. Community and Plugins: Has a large ecosystem with
+numerous plugins and extensions, accelerating development time.
+(express ke pass bahut hi jada aur har chiz ke lia
+packages hai bas hame kaunsa package kis time aur
+hamrari need ke basis pe use krna hai vo sikhna hai)
+
+
+//////////////////
+it is all about middleware, agar kisi middleware ki 
+condition satisfy nhi hui to vhi se wapas bhej dega
+//////////////////
+
+C. handling routes
+
+--> 
+app.use([path,] callback [, callback...])
+
+Mounts the specified middleware function or functions
+at the specified path: the middleware function is
+executed when the base of the requested path matches path.
+
+1. order matters 
+2. Cannor call next() after send()
+3. "/" matches everything
+4. Calling res.send() implicitly calls res.end()
+
+ham get aur post ke basis per bi calls de skte h but 
+we should know taht order matters, if we run submit-detais
+on post then it will run only whem somthing is submited 
+and get will only run when someone is tryna get 
+somthing from our server or client.
