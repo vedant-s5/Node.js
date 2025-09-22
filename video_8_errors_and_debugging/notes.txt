@@ -1,0 +1,20 @@
+---->> type of errors
+
+1. Syntax Error: An error in the code’s structure,
+causing it to not compile or run (e.g., missing semicolon).
+
+2. Logical Error: The code runs but produces incorrect
+results due to faulty logic (e.g., wrong formula).
+
+3. Runtime Error: An error that occurs while the
+program is running, often due to invalid operations.
+
+
+--------------
+now we will learn how to use debugger
+1. select app.js
+2. click on top left (run)
+3. start debugging 
+
+
+async code main har call =back ke pass breal point lagane padenge verna vo use skip krke age bhaag jayeyga 
