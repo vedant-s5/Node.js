@@ -1,0 +1,47 @@
+1. parsing request 
+
+--> we have a package in our expressjs which is body-parser.
+express ne body parser ke lia bi middleware define kr 
+rkhe hai, post wale middleware pe hamne request accept kri 
+hai to vhi pe ham post middleware se pehle body parsing kr lenge
+
+2. request handler
+--> do req handler bante hai means ki jo airbnb pe apne ghar
+rent ke lia list krra hai aur ek user ka request handler
+banega server pe, jo usko avail krenge.
+
+
+3. express router
+
+-->>
+express routing ka mtlb hai ki hama user ka ek alag file 
+main kaam krte hai aur host ka ek alag file main kaam 
+krte hai aur unhe phir main file se join kr denge 
+this is call express routing 
+
+4. adding 404 package
+
+-->> 
+error page show krne ke lia agar ham res.send use krenge toit will treat it as another page of our webpage but it is
+not, so we have to use res.status(404).send().
+
+5. common paths
+
+-->>
+agar hamare pass bahut sare path hai aur hame un path main 
+ek commaon path concat krna hai jsut like /host/add-home,
+/host/payment aise to ham ek sath sab pe add kr skte hai use
+bar bar apne paths pe na likh ke, vo app.use main jab unmiddlwares ko use krenge vhi pe mention kr denge 
+
+6. serving html file
+
+-->> 
+html file connect krne ke lia ham path module ko use krte hai
+ab isko import krne ke baad hame milta hai res.sendFile()
+aur path main ham dalte hai path.join(__dirname)
+__dirname is called current directory name, apne aap fetch kr leta hai.
+
+ab ham chahte hai ki hame bar bar path 
+likhne ki need na pade agar kabi future main
+us html file ka name ya path change kre toh 
+ham uska exact path bi dal skte hai. 
