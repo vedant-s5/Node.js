@@ -1,0 +1,55 @@
+13. Model View Controller(MVC)
+-->>
+
+koi project krte time jaise jaise chize jada aur badi hone lagti hai
+hon ek proper architecture main unhe define kr dena chaiye jisse 
+hame kisi bi tarah ki dikkat na ho...
+
+13.1 Seperation of concerns(responsibilities)
+
+1. MVC stands for Model-View-Controller: A software architectural
+pattern for developing user interfaces.
+
+2. Model: Manages the data and business logic of the application.
+
+3. View: Handles the display and presentation of data to the user.
+
+4. Controller: Processes user input, interacts with the Model, and
+updates the View accordingly.
+
+5. Routes are a part of Controllers.
+
+6. Purpose: MVC separates concerns within an application, making it
+easier to manage and scale.
+
+13.2 Adding first Controller
+-->>
+ab hamne sare Controller add kr liye hai
+
+13.3 adding models
+-->> 
+ab hamne kya kra hai ki hamne home Controller main direct req.body kr lia hai
+jisse kya hoga ki clent hame kuch bi bhej de ham use body yani home page 
+ka part manke use print kr denge, ye to bahut bada blunder hai
+islia ab ham individually register krenge jisse ye dikkat na aye kabi
+
+13.6 Writing data to files
+-->> 
+ab ham kya krte hai ki apne fake database jo banaya tha use thoda 
+improve kr lete hai.
+
+13.7 Nodemon causing promblem
+abi hame kya kra, hamari jason file mai write to hogya hai jo bi hamne bheja tha
+but ab dikkat agyi ki hamare home page pe kuch bi aya hai...
+nodemon hamara har file ke through jata hai aur usko laga ki code main kuch change hua hai to usne hamara
+registerHome hata hi dia hai.. abi hame usko retrieve
+krna padega.. usko btana padega ki file main data write hua haikoi code change nhi hua
+hai to, bar abr server restart na kre..
+
+abi bi hamara data store nhi ho rha hai, kyuki data 
+usne write to kr diya hai but usne read nhi kra hai 
+, jab vo use read krega tabi to retrieve all kr payega
+fetchall kr payega, aur hamne fetchAll main array pass kra hai aur array hamne empty diya hai starting main, to ham ab fetchAll main data ko read krenge.
+
+
+
