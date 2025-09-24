@@ -1,0 +1,44 @@
+12. Dynamic UI using EJS
+
+12.1 Need of Dynamic UI
+-->>
+• Personalized Content: Tailors responses based on
+user profiles, preferences, or behaviors to enhance user experience.
+
+• Dynamic Data Delivery: Provides real-time
+information that updates with each request, such as live scores or stock prices.
+
+• Security and Access Control: Delivers different
+content based on user authentication and authorization levels.
+
+• Localization and Internationalization: Adjusts
+responses to accommodate different languages, cultures, or regional settings.
+
+• API Versatility: Supports multiple client types
+(web, mobile, IoT) by providing appropriate data formats and structures.
+
+video_12_dymamicUI_EJS
+
+12.2 Sharing using global variables
+
+12.3 what is EJS(embedded java script)?
+-->> 
+>> HTML with JS: EJS lets you embed JavaScript code within HTML.
+
+>> Simple Syntax: Uses <% %> for control flow and <%= %> for output.
+
+>> Easy to Learn: Familiar to those who know HTML and JavaScript.
+
+>> Template Reuse: Supports partials for reusing code snippets.
+
+>> Flexible Logic: Allows full JavaScript expressions in templates.
+
+12.4 Working with partials
+-->>
+partials ham islia use krte hai kyuki ham kai bar same header ya nav ya head ka code har html file main same 
+rkhte hai islia abr abr har html file main likhne 
+acha hai ki use hame ek seperate folder main dalke apni html file se connect kr de jisse bar bar likhna na Pade 
+same code.
+
+aur ejs templateske through ham apni html file main bina
+script environment banaye js ke commands run rk skte haiaur apni baki files ko direct html se conncect kr skte hai.
