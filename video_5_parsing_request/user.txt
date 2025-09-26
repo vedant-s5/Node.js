@@ -1,1 +1,1 @@
-{"username":"vedantsingh_5","gender":"male"}
+username=vedantsingh_5&gender=male
