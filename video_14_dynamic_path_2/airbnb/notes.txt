@@ -1,0 +1,150 @@
+14.1 What are Dynamic Paths?
+-->>
+abi jo hamne apni website main path define kre hai vo constant hai means
+ke vo /something pe usi page per leke jayenge jo hamne diya hai vha per
+randomly kuch change nhi hora hai, vo constant hai bas page kholke de 
+dega, isamin ham aur bi chize use kr skte hai, jaise ki key value pairs 
+ke through ham us particular page ki chizo ko acces kr skte hai ya usse
+return kra skte hai, this is done by 
+query parameters (https://www.domain.com/page?key1=value1&key2=value2)..
+
+aur doosra hota hai path parameters, ismain ham direct koi value dal 
+skte hai (https://example.com/students/john/grades?order=asc)
+
+--->>> Path parameters are variables embedded directly in the URL path
+to capture dynamic values, like /users/:userId where :userId is replaced
+with a specific user ID.
+
+--->>> Query parameters are key-value pairs appended to the URL after
+a ?, used to send additional data, like /search?query=nodejs where
+query=nodejs specifies the search term.
+------------------------------------------------------------
+14.2 Adding Home Details Page
+
+-> Add a details button in /homes-list to go to link path /homes/:home-id
+
+-> Add a random id to each home in the data file.
+
+-> Add a random id on home object before saving in the home model.
+
+-> Add a route in the store router for /homes/:home-id
+
+-> Add a method in store controller to get the home-id using req.params and log it, before sending out a dummy response with home id.
+
+-------------------------------------
+14.3 Showing real Home data
+
+-->> Add a static findById method in Home model that
+takes a callback.
+
+-->> Use this findById method in the controller to load home details and log them.
+
+-->> Now change the controller:
+a. Redirect to /homes in case the home is not found, logging an error.
+b. Rendering the /home-detail page with home data.
+
+-->> Create a home-detail page to use the entire page to show all data.
+
+-->> Download from Github:
+a. The styled home-detail file.
+b. 10 images of homes that you can put locally and use.
+
+14.4 Adding Favourites Feature
+
+-----------more info----------
+ham req get type ki tab krte hai jab ham koo data ko read krne ki koshish kr rhe ho 
+koi change expect ni kr rhe hai,
+
+aur req post type ki tabh krte hai jab ham acutally main apne data main kisi chiz main
+change expect kr rhe hote hai.
+-------------------------------
+
+-->> Create a partial with a form and a button that submits to /favourites path with a hidden input having home-id value.
+
+-->> Add this partial to home-detail page. ✅
+
+-->> Add this partial to home-list page. ✅
+
+-->> Add router for handling POST request to 
+/favourites path.
+
+-->> Add a method in store controller to add a home id as favourites, logging the id for now, before redirecting to /favourites path.-->> 
+
+--------------------------------
+14.5 Adding Favourites model(ye hamara fav page handle krega)
+
+-->> Create a new Model to handle Favourites:
+    a. A static method getFavourites that reads the favourites.json file and return the ids of all homes marked favourite.
+    b. A static method addFavourites that adds the home-id to favourites-id array if not already there, then updates the file.
+
+-->> Use this model in addFavourites controller.
+
+-->> Use this model in getFavourites controller
+while also fetching details of all homes from Homes Model.
+
+-->> Change the UI of favourites page to show new content.
+--------------------------------------------
+14.6 Edit-Home: Adding features skeleton
+
+-->> Rename the add-home.ejs to edit-home.ejs
+
+-->> Fix it’s usage in the add-home controller.
+
+-->> Change the path of edit button everywhere.
+
+-->> Add a new router for GET /edit-home/:home-id
+
+-->> Add a new controller method in host controller,
+optionally using query param of editing=true, while passing editing from ejs.
+-----------------------------------------------
+14.7 Edit-Home: Showing Existing Data
+
+-->> Change the controller to now fetch the home
+details, if not found redirect to /host
+host-home-list otherwise passing the data to view.
+
+Change the edit-home.ejs to show dynamic content based on values:
+a. Different submit path.
+b. Different button text.
+c. Pre-filled values if present.
+--------------------------------------------------
+14.8 Edit-Home: Handling Edit Request
+
+-->> Add a router for POST /edit-home
+
+-->> Add a controller for /edit-home, which creates
+a home model object and saves it, before redirecting to /host/host-home-list
+
+-->> Add hidden id input field in the edit-home.ejs
+to get the id as part of POST request.
+
+-->> Change the save method in Model to handle
+creation of homes as well as updation of existing Home.
+-----------------------------------------------------
+14.9 Adding Delete Feature
+
+-->> Surround the delete button with a form that submits to path /host/delete-home/:homeId.
+
+-->> Add a route in the host routes.
+
+-->> Add a static delete method to the Home model that takes an id and deletes the home.
+
+-->> Add a method in host controller to handle the
+request, delete the home and redirect to /host/host-homes-list page.
+
+-->> Pending: deleted homes might still be in favourites list.
+---------------------------------------------------
+14.10 Removing Home from Favourites
+
+-->> Add a static method to the favourites model to delete the home.
+
+-->> Add a form to the favourites-list in each home
+to path /favourites/delete/:homeId.
+
+-->> Add a route for POST delete-favourites in the store routes.
+
+-->> Add a method in store controller to use the
+model’s static method and then redirect to favourites-list.
+
+-->> Use this model method in home-delete to make
+sure any deleted home is also removed from favourites.
