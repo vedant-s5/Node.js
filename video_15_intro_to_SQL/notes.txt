@@ -1,0 +1,79 @@
+15.1 What is a DB (Database)
+
+-->> Store Data: Keep large amounts of data in a structured format.
+
+-->> Enable Data Management: Allow for adding, updating, and deleting data easily.
+
+-->> Facilitate Quick Access: Provide fast retrieval of data through queries.
+
+-->> Ensure Data Integrity: Maintain accuracy and consistency of data over time.
+
+-->> Support Multiple Users: Handle concurrent access by many users simultaneously.
+
+-->> Secure Data: Protect information through access controls and authentication.
+
+15.2 Introduction to SQL DB
+
+1. Relational Model:
+Organize data into tables with rows and columns.
+
+2. Fixed Schema:
+Require a predefined schema; the structure of the data must be known in advance.
+
+3. Vertical Scalability:
+Typically scaled by increasing the resources of a single server (scaling up).
+
+4. Relationships:
+Tables can have multiple types of relationships.
+
+1. Relational Model Use of SQL:
+Utilize SQL for querying and managing data, which is a standardized and widely-used language.
+
+2. ACID Compliance:
+Support transactions that are Atomic(ya to transactions poori hoti hai ya hoti hi nhi hai), Consistent, Isolated(transactions ek doosre se related nhi hone chaiye), and Durable(data bana rehna chaiye).
+
+3. Complex Queries:
+Excel at handling complex queries and relationships between data.
+
+15.3 Introduction to NoSQL DB
+
+1. Flexible Schema:
+Allow for dynamic schemas, accommodating unstructured or semi-structured data without predefined structures.
+
+2. Duplicacy over Relations:
+Duplicates data across records (denormalization) to enhance performance and scalability, rather than relying on complex relationships and joins as in relational databases.
+
+3. Horizontal Scalability:
+Designed to scale out by adding more servers, handling large volumes of data efficiently.
+
+4. Performance:
+Optimized for high throughput and low latency, suitable for real-time applications.
+
+
+//////////////////////
+ab hame database use krne ke lia file related jo hamne
+fake database banaya tha use sara remove krna padega, sab file related code
+delete krna padega
+//////////////////////
+
+15.9 Adding DB in Models
+
+1. Remove the test code from app.js.
+
+2. Change the Home.js model file to remove all code related to file operations.
+
+3. Import the DB from the utils.
+
+4. Change photoUrl to imageUrl and houseName to name in the entire project.
+
+5. Implement fetchAll:
+a. Using the query we used while testing.
+b. fetchAll will not take a callback but return a promise.
+
+6. Go to StoreController and use the promise to get the data here.
+
+7. Fix all the usages of fetchAll.
+
+----------------------------------------
+
+
